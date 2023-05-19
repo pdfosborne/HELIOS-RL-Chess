@@ -1,6 +1,6 @@
 {   
-    "name": "template",
-    "problem_type": "template",
+    "name": "Chess",
+    "problem_type": "ChessTG",
     
     "experience_sample_batch_ratio": 0,
      
@@ -11,7 +11,7 @@
     "number_test_episodes": 100,
     "number_test_repeats": 2,
 
-    "agent_select": ["Qlearntab", "Neural_Q"],
+    "agent_select": ["Qlearntab"],
     "agent_parameters":{
         "Qlearntab":{
             "alpha": 0.05,

@@ -1,0 +1,119 @@
+﻿Player,Piece,Move_type,Move_dir,Move_dis_j,Logic,Language
+White,Rook,moves,forwards,j_new-j,if j_new>j,White Rook at {ij} moves |j_new-j| number of squares forwards
+White,Rook,moves,left,i-i_new,if i_new<i,White Rook at {ij} moves |i-i_new| number of squares left
+White,Rook,moves,right,i_new-i,if i_new>i,White Rook at {ij} moves |i_new-i| number of squares right
+White,Rook,moves,backwards,j-j_new,if j_new<j,White Rook at {ij} moves |j-j_new| number of squares backwards
+White,Rook,captures piece [N] by moving,forwards,j_new-j,if j_new>j & capture,White Rook at {ij} captures piece [N] by moving |j_new-j| number of squares forwards
+White,Rook,captures piece [N] by moving,left,i-i_new,if i_new<I & capture,White Rook at {ij} captures piece [N] by moving |i-i_new| number of squares left
+White,Rook,captures piece [N] by moving,right,i_new-i,if i_new>I & capture,White Rook at {ij} captures piece [N] by moving |i_new-i| number of squares right
+White,Rook,captures piece [N] by moving,backwards,j-j_new,if j_new<j & capture,White Rook at {ij} captures piece [N] by moving |j-j_new| number of squares backwards
+Black,Rook,moves,forwards,j-j_new,if j_new<j,Black Rook at {ij} moves |j-j_new| number of squares forwards
+Black,Rook,moves,left,i_new-i,if i_new>i,Black Rook at {ij} moves |i_new-i| number of squares left
+Black,Rook,moves,right,i-i_new,if i_new<i,Black Rook at {ij} moves |i-i_new| number of squares right
+Black,Rook,moves,backwards,j_new-j,if j_new>j,Black Rook at {ij} moves |j_new-j| number of squares backwards
+Black,Rook,captures piece [N] by moving,forwards,j-j_new,if j_new<j & capture,Black Rook at {ij} captures piece [N] by moving |j-j_new| number of squares forwards
+Black,Rook,captures piece [N] by moving,left,i_new-i,if i_new>I & capture,Black Rook at {ij} captures piece [N] by moving |i_new-i| number of squares left
+Black,Rook,captures piece [N] by moving,right,i-i_new,if i_new<I & capture,Black Rook at {ij} captures piece [N] by moving |i-i_new| number of squares right
+Black,Rook,captures piece [N] by moving,backwards,j_new-j,if j_new>j & capture,Black Rook at {ij} captures piece [N] by moving |j_new-j| number of squares backwards
+White,Bishop,moves diagonally,forwards and right,j_new-j,if j_new>j & i_new>i,White Bishop at {ij} moves diagonally |j_new-j| number of squares forwards and right
+White,Bishop,moves diagonally,forwards and left,j_new-j,if j_new>j & i_new<i,White Bishop at {ij} moves diagonally |j_new-j| number of squares forwards and left
+White,Bishop,moves diagonally,backwards and right,j-j_new,if j_new>j & i_new>i,White Bishop at {ij} moves diagonally |j-j_new| number of squares backwards and right
+White,Bishop,moves diagonally,backwards and left,j-j_new,if j_new>j & i_new<i,White Bishop at {ij} moves diagonally |j-j_new| number of squares backwards and left
+White,Bishop,captures piece [N] by moving diagonally,forwards and right,j_new-j,if j_new>j & i_new>I & capture,White Bishop at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares forwards and right
+White,Bishop,captures piece [N] by moving diagonally,forwards and left,j_new-j,if j_new>j & i_new<i & capture,White Bishop at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares forwards and left
+White,Bishop,captures piece [N] by moving diagonally,backwards and right,j-j_new,if j_new>j & i_new>i & capture,White Bishop at {ij} captures piece [N] by moving diagonally |j-j_new| number of squares backwards and right
+White,Bishop,captures piece [N] by moving diagonally,backwards and left,j-j_new,if j_new>j & i_new<i & capture,White Bishop at {ij} captures piece [N] by moving diagonally |j-j_new| number of squares backwards and left
+Black,Bishop,moves diagonally,forwards and right,j-j_new,if j_new>j & i_new<i,Black Bishop at {ij} moves diagonally |j-j_new| number of squares forwards and right
+Black,Bishop,moves diagonally,forwards and left,j-j_new,if j_new>j & i_new>i,Black Bishop at {ij} moves diagonally |j-j_new| number of squares forwards and left
+Black,Bishop,moves diagonally,backwards and right,j_new-j,if j_new>j & i_new<i,Black Bishop at {ij} moves diagonally |j_new-j| number of squares backwards and right
+Black,Bishop,moves diagonally,backwards and left,j_new-j,if j_new>j & i_new>i,Black Bishop at {ij} moves diagonally |j_new-j| number of squares backwards and left
+Black,Bishop,captures piece [N] by moving diagonally,forwards and right,j-j_new,if j_new>j & i_new<i & capture,Black Bishop at {ij} captures piece [N] by moving diagonally |j-j_new| number of squares forwards and right
+Black,Bishop,captures piece [N] by moving diagonally,forwards and left,j-j_new,if j_new>j & i_new>I & capture,Black Bishop at {ij} captures piece [N] by moving diagonally |j-j_new| number of squares forwards and left
+Black,Bishop,captures piece [N] by moving diagonally,backwards and right,j_new-j,if j_new>j & i_new<i & capture,Black Bishop at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares backwards and right
+Black,Bishop,captures piece [N] by moving diagonally,backwards and left,j_new-j,if j_new>j & i_new>I & capture,Black Bishop at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares backwards and left
+White,Pawn,moves,forwards,j_new-j,if j_new>j,White Pawn at {ij} moves |j_new-j| number of squares forwards
+White,Pawn,captures piece [N] by moving diagonally,forwards and right,j_new-j,if j_new>j & i_new>I & capture,White Pawn at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares forwards and right
+White,Pawn,captures piece [N] by moving diagonally,forwards and left,j_new-j,if j_new>j & i_new<I & capture,White Pawn at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares forwards and left
+Black,Pawn,moves,forwards,j-j_new,if j-j_new,Black Pawn at {ij} moves |j-j_new| number of squares forwards
+Black,Pawn,captures piece [N] by moving diagonally,forwards and right,j-j_new,if j-j_new & i_new<I & capture,Black Pawn at {ij} captures piece [N] by moving diagonally |j-j_new| number of squares forwards and right
+Black,Pawn,captures piece [N] by moving diagonally,forwards and left,j-j_new,if j-j_new & i_new>I & capture,Black Pawn at {ij} captures piece [N] by moving diagonally |j-j_new| number of squares forwards and left
+White,King,moves,forwards,j_new-j,if j_new>j,White King at {ij} moves |j_new-j| number of squares forwards
+White,King,moves,left,i-i_new,if i_new<i,White King at {ij} moves |i-i_new| number of squares left
+White,King,moves,right,i_new-i,if i_new>i,White King at {ij} moves |i_new-i| number of squares right
+White,King,moves,backwards,j-j_new,if j_new<j,White King at {ij} moves |j-j_new| number of squares backwards
+White,King,moves diagonally,forwards and right,j_new-j,if j_new>j & i_new>i,White King at {ij} moves diagonally |j_new-j| number of squares forwards and right
+White,King,moves diagonally,forwards and left,j_new-j,if j_new>j & i_new<i,White King at {ij} moves diagonally |j_new-j| number of squares forwards and left
+White,King,moves diagonally,backwards and right,j-j_new,if j_new>j & i_new>i,White King at {ij} moves diagonally |j-j_new| number of squares backwards and right
+White,King,moves diagonally,backwards and left,j-j_new,if j_new>j & i_new<i,White King at {ij} moves diagonally |j-j_new| number of squares backwards and left
+White,King,captures piece [N] by moving,forwards,j_new-j,if j_new>j & capture,White King at {ij} captures piece [N] by moving |j_new-j| number of squares forwards
+White,King,captures piece [N] by moving,left,i-i_new,if i_new<I & capture,White King at {ij} captures piece [N] by moving |i-i_new| number of squares left
+White,King,captures piece [N] by moving,right,i_new-i,if i_new>I & capture,White King at {ij} captures piece [N] by moving |i_new-i| number of squares right
+White,King,captures piece [N] by moving,backwards,j-j_new,if j_new<j & capture,White King at {ij} captures piece [N] by moving |j-j_new| number of squares backwards
+Black,King,moves,forwards,j-j_new,if j_new<j,Black King at {ij} moves |j-j_new| number of squares forwards
+Black,King,moves,left,i_new-i,if i_new>i,Black King at {ij} moves |i_new-i| number of squares left
+Black,King,moves,right,i-i_new,if i_new<i,Black King at {ij} moves |i-i_new| number of squares right
+Black,King,moves,backwards,j_new-j,if j_new>j,Black King at {ij} moves |j_new-j| number of squares backwards
+Black,King,moves diagonally,forwards and right,j_new-j,if j_new>j & i_new>i,Black King at {ij} moves diagonally |j_new-j| number of squares forwards and right
+Black,King,moves diagonally,forwards and left,j_new-j,if j_new>j & i_new<i,Black King at {ij} moves diagonally |j_new-j| number of squares forwards and left
+Black,King,moves diagonally,backwards and right,j-j_new,if j_new>j & i_new>i,Black King at {ij} moves diagonally |j-j_new| number of squares backwards and right
+Black,King,moves diagonally,backwards and left,j-j_new,if j_new>j & i_new<i,Black King at {ij} moves diagonally |j-j_new| number of squares backwards and left
+Black,King,captures piece [N] by moving,forwards,j-j_new,if j_new<j & capture,Black King at {ij} captures piece [N] by moving |j-j_new| number of squares forwards
+Black,King,captures piece [N] by moving,left,i_new-i,if i_new>I & capture,Black King at {ij} captures piece [N] by moving |i_new-i| number of squares left
+Black,King,captures piece [N] by moving,right,i-i_new,if i_new<I & capture,Black King at {ij} captures piece [N] by moving |i-i_new| number of squares right
+Black,King,captures piece [N] by moving,backwards,j_new-j,if j_new>j & capture,Black King at {ij} captures piece [N] by moving |j_new-j| number of squares backwards
+White,Queen,moves,forwards,j_new-j,if j_new>j,White Queen at {ij} moves |j_new-j| number of squares forwards
+White,Queen,moves diagonally,forwards and right,j_new-j,if j_new>j & i_new>i,White Queen at {ij} moves diagonally |j_new-j| number of squares forwards and right
+White,Queen,moves diagonally,forwards and left,j_new-j,if j_new>j & i_new<i,White Queen at {ij} moves diagonally |j_new-j| number of squares forwards and left
+White,Queen,moves,left,i-i_new,if i_new<i,White Queen at {ij} moves |i-i_new| number of squares left
+White,Queen,moves,right,i_new-i,if i_new>i,White Queen at {ij} moves |i_new-i| number of squares right
+White,Queen,moves,backwards,j-j_new,if j_new<j,White Queen at {ij} moves |j-j_new| number of squares backwards
+White,Queen,moves diagonally,backwards and right,j-j_new,if j_new>j & i_new>i,White Queen at {ij} moves diagonally |j-j_new| number of squares backwards and right
+White,Queen,moves diagonally,backwards and left,j-j_new,if j_new>j & i_new<i,White Queen at {ij} moves diagonally |j-j_new| number of squares backwards and left
+White,Queen,captures piece [N] by moving,forwards,j_new-j,if j_new>j & capture,White Queen at {ij} captures piece [N] by moving |j_new-j| number of squares forwards
+White,Queen,captures piece [N] by moving diagonally,forwards and right,j_new-j,if j_new>j & i_new>I & capture,White Queen at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares forwards and right
+White,Queen,captures piece [N] by moving diagonally,forwards and left,j_new-j,if j_new>j & i_new<i & capture,White Queen at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares forwards and left
+White,Queen,captures piece [N] by moving,left,i-i_new,if i_new<I & capture,White Queen at {ij} captures piece [N] by moving |i-i_new| number of squares left
+White,Queen,captures piece [N] by moving,right,i_new-i,if i_new>I & capture,White Queen at {ij} captures piece [N] by moving |i_new-i| number of squares right
+White,Queen,captures piece [N] by moving,backwards,j-j_new,if j_new<j & capture,White Queen at {ij} captures piece [N] by moving |j-j_new| number of squares backwards
+White,Queen,captures piece [N] by moving diagonally,backwards and right,j-j_new,if j_new>j & i_new>I & capture,White Queen at {ij} captures piece [N] by moving diagonally |j-j_new| number of squares backwards and right
+White,Queen,captures piece [N] by moving diagonally,backwards and left,j-j_new,if j_new>j & i_new<i & capture,White Queen at {ij} captures piece [N] by moving diagonally |j-j_new| number of squares backwards and left
+Black,Queen,moves,forwards,j-j_new,if j_new<j,Black Queen at {ij} moves |j-j_new| number of squares forwards
+Black,Queen,moves diagonally,forwards and right,j_new-j,if j_new<j & i_new<i,Black Queen at {ij} moves diagonally |j_new-j| number of squares forwards and right
+Black,Queen,moves diagonally,forwards and left,j_new-j,if j_new>j & i_new>i,Black Queen at {ij} moves diagonally |j_new-j| number of squares forwards and left
+Black,Queen,moves,left,i_new-i,if i_new>i,Black Queen at {ij} moves |i_new-i| number of squares left
+Black,Queen,moves,right,i-i_new,if i_new<i,Black Queen at {ij} moves |i-i_new| number of squares right
+Black,Queen,moves,backwards,j_new-j,if j_new>j,Black Queen at {ij} moves |j_new-j| number of squares backwards
+Black,Queen,moves diagonally,backwards and right,j_new-j,if j_new>j & i_new<i,Black Queen at {ij} moves diagonally |j_new-j| number of squares backwards and right
+Black,Queen,moves diagonally,backwards and left,j_new-j,if j_new>j & i_new>i,Black Queen at {ij} moves diagonally |j_new-j| number of squares backwards and left
+Black,Queen,captures piece [N] by moving,forwards,j-j_new,if j_new<j & capture,Black Queen at {ij} captures piece [N] by moving |j-j_new| number of squares forwards
+Black,Queen,captures piece [N] by moving diagonally,forwards and right,j_new-j,if j_new<j & i_new<I & capture,Black Queen at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares forwards and right
+Black,Queen,captures piece [N] by moving diagonally,forwards and left,j_new-j,if j_new>j & i_new>i & capture,Black Queen at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares forwards and left
+Black,Queen,captures piece [N] by moving,left,i_new-i,if i_new>I & capture,Black Queen at {ij} captures piece [N] by moving |i_new-i| number of squares left
+Black,Queen,captures piece [N] by moving,right,i-i_new,if i_new<I & capture,Black Queen at {ij} captures piece [N] by moving |i-i_new| number of squares right
+Black,Queen,captures piece [N] by moving,backwards,j_new-j,if j_new>j ,Black Queen at {ij} captures piece [N] by moving |j_new-j| number of squares backwards
+Black,Queen,captures piece [N] by moving diagonally,backwards and right,j_new-j,if j_new>j & i_new<i & capture,Black Queen at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares backwards and right
+Black,Queen,captures piece [N] by moving diagonally,backwards and left,j_new-j,if j_new>j & i_new>I & capture,Black Queen at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares backwards and left
+White,Knight,moves,forwards and right,j_new-j,if j_new>j,White Knight at {ij} moves |j_new-j| number of squares forwards and right
+White,Knight,moves,forwards and left,j_new-j,if j_new>j,White Knight at {ij} moves |j_new-j| number of squares forwards and left
+White,Knight,moves,backwards and right,j-j_new,if j_new<j,White Knight at {ij} moves |j-j_new| number of squares backwards and right
+White,Knight,moves,backwards and left,j-j_new,if j_new<j,White Knight at {ij} moves |j-j_new| number of squares backwards and left
+White,Knight,captures piece [N] by moving,forwards and right,j_new-j,if j_new>j & capture,White Knight at {ij} captures piece [N] by moving |j_new-j| number of squares forwards and right
+White,Knight,captures piece [N] by moving,forwards and left,j_new-j,if j_new>j & capture,White Knight at {ij} captures piece [N] by moving |j_new-j| number of squares forwards and left
+White,Knight,captures piece [N] by moving,backwards and right,j-j_new,if j_new<j & capture,White Knight at {ij} captures piece [N] by moving |j-j_new| number of squares backwards and right
+White,Knight,captures piece [N] by moving,backwards and left,j-j_new,if j_new<j & capture,White Knight at {ij} captures piece [N] by moving |j-j_new| number of squares backwards and left
+Black,Knight,moves,forwards and right,j-j_new,if j_new>j,Black Knight at {ij} moves |j-j_new| number of squares forwards and right
+Black,Knight,moves,forwards and left,j-j_new,if j_new>j,Black Knight at {ij} moves |j-j_new| number of squares forwards and left
+Black,Knight,moves,backwards and right,j_new-j,if j_new<j,Black Knight at {ij} moves |j_new-j| number of squares backwards and right
+Black,Knight,moves,backwards and left,j_new-j,if j_new<j,Black Knight at {ij} moves |j_new-j| number of squares backwards and left
+Black,Knight,captures piece [N] by moving,forwards and right,j-j_new,if j_new>j & capture,Black Knight at {ij} captures piece [N] by moving |j-j_new| number of squares forwards and right
+Black,Knight,captures piece [N] by moving,forwards and left,j-j_new,if j_new>j & capture,Black Knight at {ij} captures piece [N] by moving |j-j_new| number of squares forwards and left
+Black,Knight,captures piece [N] by moving,backwards and right,j_new-j,if j_new<j & capture,Black Knight at {ij} captures piece [N] by moving |j_new-j| number of squares backwards and right
+Black,Knight,captures piece [N] by moving,backwards and left,j_new-j,if j_new<j & capture,Black Knight at {ij} captures piece [N] by moving |j_new-j| number of squares backwards and left
+White,King,captures piece [N] by moving diagonally,forwards and right,j_new-j,if j_new>j & i_new>I & capture,White King at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares forwards and right
+White,King,captures piece [N] by moving diagonally,forwards and left,j_new-j,if j_new>j & i_new<i & capture,White King at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares forwards and left
+White,King,captures piece [N] by moving diagonally,backwards and right,j-j_new,if j_new<j & i_new>I & capture,White King at {ij} captures piece [N] by moving diagonally |j-j_new| number of squares backwards and right
+White,King,captures piece [N] by moving diagonally,backwards and left,j-j_new,if j_new<j & i_new<i & capture,White King at {ij} captures piece [N] by moving diagonally |j-j_new| number of squares backwards and left
+Black,King,captures piece [N] by moving diagonally,forwards and right,j-j_new,if j_new<j & i_new<I & capture,Black King at {ij} captures piece [N] by moving diagonally |j-j_new| number of squares forwards and right
+Black,King,captures piece [N] by moving diagonally,forwards and left,j-j_new,if j_new<j & i_new>i & capture,Black King at {ij} captures piece [N] by moving diagonally |j-j_new| number of squares forwards and left
+Black,King,captures piece [N] by moving diagonally,backwards and right,j_new-j,if j_new>j & i_new<I & capture,Black King at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares backwards and right
+Black,King,captures piece [N] by moving diagonally,backwards and left,j_new-j,if j_new>j & i_new>i & capture,Black King at {ij} captures piece [N] by moving diagonally |j_new-j| number of squares backwards and left
