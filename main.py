@@ -14,7 +14,7 @@ from helios_rl.config_local import ConfigSetup
 # ------ Local Environment --------------------------------------
 from environment.env import Environment
 # ------ Visual Analysis -----------------------------------------------
-
+from helios_rl import combined_variance_analysis_graph
 
 def main():
     # ------ Load Configs -----------------------------------------
@@ -27,16 +27,9 @@ def main():
     time = datetime.now().strftime("%d-%m-%Y_%H-%M")
     save_dir = './output/'+str('test')+'_'+time 
 
-    # --------------------------------------------------------------------
-    # Flat Baselines
-    flat = STANDARD_RL(Config=ExperimentConfig, LocalConfig=ProblemConfig, 
-                Environment=Environment,
-                save_dir=save_dir, show_figures = 'No', window_size=0.1)
-    flat.train()  
-    flat.test()
-    # --------------------------------------------------------------------
+    
     # HELIOS Instruction Following
-    num_plans = 1
+    num_plans = 3
     num_explor_epi = 20
     sim_threshold = 0.95
 
@@ -64,7 +57,31 @@ def main():
                     instruction_path=None, predicted_path=instruction_results, instruction_episode_ratio=0.1)
     reinforced_experiment.train()
     reinforced_experiment.test()
-    
+    # --------------------------------------------------------------------
+    # Flat Baselines
+    flat = STANDARD_RL(Config=ExperimentConfig, LocalConfig=ProblemConfig, 
+                Environment=Environment,
+                save_dir=save_dir, show_figures = 'No', window_size=0.1)
+    flat.train()  
+    flat.test()
+    # --------------------------------------------------------------------
+    # --------------------------------------------------------------------
+    # Combined results visual analysis
+    flat_results = pd.read_csv(save_dir+'/Standard_Experiment'+'/testing_variance_results.csv')
+    reinforced_results = pd.read_csv(save_dir+'/Reinforced_Instr_Experiment'+'/testing_variance_results.csv')
+
+    variance_results = {}
+    variance_results['Flat_agent'] = {}
+    variance_results['Flat_agent']['results'] = flat_results
+    variance_results['Flat_agent']['env_name'] = flat_results['agent'].iloc[0]
+    variance_results['Flat_agent']['num_repeats'] = flat_results['num_repeats'].iloc[0]
+
+    variance_results['Reinforced_instructions'] = {}
+    variance_results['Reinforced_instructions']['results'] = reinforced_results
+    variance_results['Reinforced_instructions']['env_name'] = reinforced_results['agent'].iloc[0]
+    variance_results['Reinforced_instructions']['num_repeats'] = reinforced_results['num_repeats'].iloc[0]
+
+    combined_variance_analysis_graph(variance_results, save_dir, show_figures='N')
 
 if __name__=='__main__':
     main()

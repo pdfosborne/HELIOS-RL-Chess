@@ -158,3 +158,11 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# Dont upload chess stat files
+scenario/Chess/language_info/eco_book_stats.json
+scenario/Chess/language_info/known_states_tree.json
+scenario/Chess/language_info/known_states_tree.pickle
+scenario/Chess/language_info/stats_map.json
+scenario/Chess/language_info/move_stats.json
+scenario/Chess/language_info/commentary.json

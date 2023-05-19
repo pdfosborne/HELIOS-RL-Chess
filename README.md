@@ -1,16 +1,10 @@
-# HELIOS-RL-TEMPLATE
+# HELIOS-RL-Chess
 
-Template of the HELIOS-RL system for applying to new problems.
+Application of the HELIOS-RL architecture to Chess. 
 
-To apply the template to a new problem:
+Uniquely, this defines Chess as a Text Game and compares to human annotated language of board configurations sourced from public forum discussions on pro level matches. 
 
-1. Install HELIOS-RL using pip install helios-rl
-2. Clone this repository to local directory
-3. Update the environment>engine.py script to setup the problem specific interaction
-4. Align adapter to problem (including encoder choice) 
-5. Update configuration files as needed
+To simplify the game for faster testing, a sub-goal is used defined by the first capture. The game will therefore end when either player captures a piece.
 
-If setup correctly then the rest is handled by the HELIOS system
-> Run main.py (change experiment call and parameters as needed)
 
 

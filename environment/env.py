@@ -27,10 +27,12 @@ OPPONENT_AGENT_PARAMETERS = {
 # 1. Default Forms
 from adapters.board_adapter import BoardAdapter
 from adapters.board_pieces_adapter import BoardPiecesAdapter
+from adapters.active_pieces_language_adapter import ActivePiecesLanguageAdapter
 
 STATE_ADAPTER_TYPES = {
     "Engine": BoardAdapter,
-    "Board_as_pieces": BoardPiecesAdapter
+    "Board_as_pieces": BoardPiecesAdapter,
+    "Active_pieces_langauge": ActivePiecesLanguageAdapter
 }
 # --------------------------------------------------------
 
@@ -86,13 +88,16 @@ class Environment:
         elif action_num == action_cap:
             game_over = True
         # Sub-goal reached
-        elif 'first_capture' in sub_goal_board:
-            if np.sum([current_board.piece_type_at(sq) for sq in chess.SQUARES if current_board.piece_type_at(sq) is not None])<74:
+        elif sub_goal_board:
+            if 'first_capture' in sub_goal_board:
+                if np.sum([current_board.piece_type_at(sq) for sq in chess.SQUARES if current_board.piece_type_at(sq) is not None])<74:
+                    game_over = True
+                else:
+                    game_over = False
+            elif str(current_board.fen()) in sub_goal_board:
                 game_over = True
             else:
                 game_over = False
-        elif (sub_goal_board != "None")&(str(current_board.fen()) in sub_goal_board):
-            game_over = True
         else:
             game_over = False
         return game_over

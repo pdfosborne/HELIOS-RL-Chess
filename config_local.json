@@ -1,9 +1,9 @@
 {
- "adapter_select": ["Engine"],
+ "adapter_select": ["Active_pieces_langauge"],
  "training_action_cap": 1000,
  "testing_action_cap":1000,
  "reward_signal": [1,-0.1,0,0],
- "sub_goal": ["first_capture"],
- "training_opponent_agent": "Random",
- "testing_opponent_agent": "Random"
+ "training_opponent_agent": "Sampled",
+ "testing_opponent_agent": "Sampled",
+ "sub_goal": ["first_capture"]
 }
