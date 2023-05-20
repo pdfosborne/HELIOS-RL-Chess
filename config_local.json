@@ -1,7 +1,7 @@
 {
- "adapter_select": ["Active_pieces_langauge"],
- "training_action_cap": 1000,
- "testing_action_cap":1000,
+ "adapter_select": ["Human_annotated_language"],
+ "training_action_cap": 20,
+ "testing_action_cap":20,
  "reward_signal": [1,-0.1,0,0],
  "training_opponent_agent": "Sampled",
  "testing_opponent_agent": "Sampled",

@@ -44,7 +44,7 @@ class ActivePiecesLanguageAdapter(StateAdapter):
             state:str = 'The active pieces on the board are: '
             for n,active_piece in enumerate(list(self.active_pieces.keys())):
                 if n+1 < len(list(self.active_pieces.keys())):
-                    state = state + active_piece + ', '
+                    state = state + active_piece + '. '
                 else:
                     state = state + active_piece + '.'
             state = [state]

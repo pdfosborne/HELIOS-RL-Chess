@@ -28,11 +28,19 @@ OPPONENT_AGENT_PARAMETERS = {
 from adapters.board_adapter import BoardAdapter
 from adapters.board_pieces_adapter import BoardPiecesAdapter
 from adapters.active_pieces_language_adapter import ActivePiecesLanguageAdapter
+from adapters.poss_actions_to_language_adapter import PossibleActionsToLanguageAdapter
+from adapters.prior_actions_to_language_adapter import PriorActionsToLanguageAdapter
+from adapters.combined_adapter import CombinedAdapter
+from adapters.human_language_annotations import HumanAnnotationsAdapter
 
 STATE_ADAPTER_TYPES = {
     "Engine": BoardAdapter,
     "Board_as_pieces": BoardPiecesAdapter,
-    "Active_pieces_langauge": ActivePiecesLanguageAdapter
+    "Active_pieces_langauge": ActivePiecesLanguageAdapter,
+    "Poss_actions_language": PossibleActionsToLanguageAdapter,
+    "Prior_actions_language": PriorActionsToLanguageAdapter,
+    "Combined_language": CombinedAdapter,
+    "Human_annotated_language": HumanAnnotationsAdapter
 }
 # --------------------------------------------------------
 
@@ -222,6 +230,8 @@ class Environment:
                     # Push move into board engine
                     next_obs, reward, engine_terminated = self.env.step(state=obs, action=black_action)
                     legal_moves = self.env.legal_move_generator(obs)
+                    # Need to call so that black action gets added to adapter history
+                    black_state = self.agent_state_adapter.adapter(board_fen=next_obs, legal_moves=legal_moves, episode_action_history=action_history, encode=True)
                     # Game over check
                     terminated = Environment.goal_reached(current_board_fen=next_obs, 
                                         sub_goal_board=self.sub_goal, 
