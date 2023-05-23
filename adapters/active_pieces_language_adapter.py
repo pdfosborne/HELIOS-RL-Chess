@@ -47,10 +47,10 @@ class ActivePiecesLanguageAdapter(StateAdapter):
                     state = state + active_piece + '. '
                 else:
                     state = state + active_piece + '.'
-            state = [state]
+            
         # Encode to Tensor for agents
         if encode:
-                state_encoded = self.encoder.encode(state=state)
+            state_encoded = self.encoder.encode(state=state)
         else:
             state_encoded = state
 
